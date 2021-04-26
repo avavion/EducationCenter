@@ -465,6 +465,52 @@ a {
   }
 }
 
+.documents {
+  background-color: var(--color-blue);
+  .section__wrapper {
+    border-color: #fff;
+  }
+  &-right {
+    flex: 1;
+    background-color: #fff;
+    color: var(--color-blue);
+    padding: 25px 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+  &-left {
+    flex: 3;
+    margin-right: 50px;
+    background-color: #fff;
+    color: var(--color-blue);
+    padding: 25px 20px;
+  }
+  &-header {
+    &__title {
+      color: #fff;
+    }
+    margin-bottom: 80px;
+  }
+  &-grid {
+    grid-template-columns: 1fr;
+
+    &-item {
+      font-size: 36px;
+      font-weight: 700;
+      justify-content: space-between;
+      a {
+        text-decoration: underline;
+        color: var(--color-blue);
+      }
+      &:not(:last-child) {
+        margin-bottom: 20px;
+      }
+    }
+  }
+}
+
 // Мероприятия
 .events {
   background-color: var(--color-blue);
@@ -492,7 +538,6 @@ a {
   }
 
   &-card {
-    // max-height: 600px;
     & ~ h2 {
       text-align: center;
     }
