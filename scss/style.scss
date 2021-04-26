@@ -416,6 +416,7 @@ a {
   }
 }
 
+// Доп. образование
 .education {
   background-color: var(--color-blue);
   .section__wrapper {
@@ -459,6 +460,68 @@ a {
         left: 50%;
         transform: translate(-50%, -50%);
         text-align: center;
+      }
+    }
+  }
+}
+
+// Мероприятия
+.events {
+  background-color: var(--color-blue);
+  .section__wrapper {
+    border-color: #fff;
+  }
+  &-header {
+    &__title {
+      color: #fff;
+    }
+    margin-bottom: 80px;
+  }
+  &-grid {
+    grid-template-columns: 1fr;
+    color: #fff;
+    gap: 100px;
+    &-item {
+      align-items: center;
+      justify-content: space-between;
+      text-align: center;
+      &:nth-child(even) {
+        flex-direction: row-reverse;
+      }
+    }
+  }
+
+  &-card {
+    // max-height: 600px;
+    & ~ h2 {
+      text-align: center;
+    }
+    &-content {
+      padding: 20px;
+      background-color: #fff;
+      color: #000;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      // h3,
+      // p {
+      //   color: #000;
+      // }
+    }
+    &-image {
+      position: relative;
+      a {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-weight: bold;
+        font-size: 36px;
+        text-align: center;
+        color: #ffffff;
+        background: rgba(255, 255, 255, 0.3);
+        padding: 10px 20px;
       }
     }
   }
@@ -766,9 +829,27 @@ a {
   .hero-grid-item__title {
     font-size: 22px;
   }
+
+  .events-grid {
+    gap: 50px;
+  }
 }
 
 @media screen and (max-width: 780px) {
+  .events-grid {
+    gap: 50px;
+    grid-template-columns: 1fr;
+    &-item {
+      &:nth-child(odd),
+      &:nth-child(even) {
+        flex-direction: column;
+      }
+    }
+  }
+  .events-card {
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
   .nav {
     &-list {
       display: none;
